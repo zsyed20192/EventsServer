@@ -28,7 +28,7 @@ const server = http.createServer(async (req, res) => {
 
         
 
-       const allowedOrigins = ['https://eventsserver.onrender.com/api'];
+       const allowedOrigins = ['https://eventsserver.onrender.com'];
     const requestOrigin = req.headers.origin;
     
     if (allowedOrigins.includes(requestOrigin)) {
