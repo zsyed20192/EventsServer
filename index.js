@@ -24,18 +24,24 @@ async function fetchEvents() {
 
 const server = http.createServer(async (req, res) => {
     
-    /*
+    
 
         
 
-        we can Navigate to different pages via different requests. 
-        if / then goto index.html
-        if /about about then goto about.html
-        if /api then laod the JSON file  /  ;) this might be something you need for your exam. 
+       const allowedOrigins = ['https://eventsserver.onrender.com/api'];
+    const requestOrigin = req.headers.origin;
+    
+    if (allowedOrigins.includes(requestOrigin)) {
+      res.setHeader('Access-Control-Allow-Origin', requestOrigin);
+    } else {
+      res.setHeader('Access-Control-Allow-Origin', false);
+    }
+    
+    res.setHeader('Vary', 'Origin');
 
 
 
-    */
+    
    
     
     
