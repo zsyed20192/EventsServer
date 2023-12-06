@@ -76,7 +76,8 @@ const server = http.createServer(async (req, res) => {
         try {
             const events = await fetchEvents();
 
-            res.writeHead(200, { 'Content-Type': 'application/json' });
+             res.writeHead(200, {'Content-Type': 'application/json','Access-Control-Allow-Origin':'*'})
+
             res.end(JSON.stringify(events));
         } catch (error) {
             console.error(error);
