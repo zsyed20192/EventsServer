@@ -22,28 +22,7 @@ async function fetchEvents() {
 }
 
 
-const server = http.createServer(async (req, res) => {
-    
-    
-
-        
-
-       const allowedOrigins = ['https://eventsserver.onrender.com'];
-    const requestOrigin = req.headers.origin;
-    
-    if (allowedOrigins.includes(requestOrigin)) {
-      res.setHeader('Access-Control-Allow-Origin', requestOrigin);
-    } else {
-      res.setHeader('Access-Control-Allow-Origin', false);
-    }
-    
-    res.setHeader('Vary', 'Origin');
-
-
-
-    
-   
-    
+const server = http.createServer(async (req, res) => { 
     
     if (req.url === '/') {
         // read public.html file from public folder
