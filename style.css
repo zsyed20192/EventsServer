@@ -1,0 +1,67 @@
+.container{
+
+    display: grid;
+    height: 20vh;
+
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr  ;
+    grid-gap: 0.2rem;
+    grid-template-areas:     
+    
+    "about someinfo someinfo someinfo"
+   
+
+    
+    
+    ;
+    place-content: center;
+}
+.navigation{
+
+    float: right;
+    font-size: 30px;
+    max-height: 50px;
+    grid-area: nav;
+}
+
+a{
+    padding: 10px;
+}
+
+.about{
+    grid-area: about;
+    padding: 50px;
+    margin: 30px;
+}
+
+.someinfo{
+
+    grid-area: someinfo;
+    padding: 125px;
+}
+#education{
+    float: top;
+}
+p{
+    display: inline-block;
+    align-items: center;
+}
+
+.projects{
+    text-align: justify;
+}
+
+img{
+
+    display: inline-block;
+    align-items: center;
+}
+
+#myid{
+    float: right;
+}
+
+footer{
+    display: inline;
+}
+
