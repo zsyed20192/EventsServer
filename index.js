@@ -26,7 +26,7 @@ const server = http.createServer(async (req, res) => {
     
     if (req.url === '/') {
         // read public.html file from public folder
-        fs.readFile(path.join(__dirname, 'public', 'index.html'),
+        fs.readFile(path.join(__dirname, 'index.html'),
                     (err, content) => {
                                     
                                     if (err) throw err;
@@ -41,7 +41,7 @@ const server = http.createServer(async (req, res) => {
 
         // read the about.html file public folder
         fs.readFile(
-            path.join(__dirname, 'public', 'about.html'),
+            path.join(__dirname,'about.html'),
                     (err, content) => {
                                     
                                     if (err) throw err;
