@@ -51,7 +51,7 @@ const server = http.createServer(async (req, res) => {
               );
      }
          else if (req.url === '/style.css') {
-        fs.readFile(path.join(__dirname, 'public', 'style.css'), (err, content) => {
+        fs.readFile(path.join(__dirname, 'style.css'), (err, content) => {
             if (err) throw err;
             res.setHeader("Access-Control-Allow-Origin", "*");
             res.writeHead(200, { 'Content-type': 'text/css' });
