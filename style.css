@@ -1,67 +1,677 @@
+:root{
+
+    --main-radius: 5px;
+    --main-padding:5px;
+    --yellowish:  #E4C2C7;
+}
+
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+
 .container{
-
     display: grid;
-    height: 20vh;
-
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 0.5fr  ;
-    grid-gap: 0.2rem;
-    grid-template-areas:     
     
-    "about someinfo someinfo someinfo"
-   
-
-    
+    height: 100%;
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    grid-template-rows:0.2fr 0.6fr 0.1fr 0.4fr 0.4fr 0.1fr 0.3fr 0.1fr 0.4fr 0.1fr 0.2fr 0.1fr  ;
+    grid-template-areas:
+    "nav nav nav nav"
+    "sidebar main main main"
+    "publications publications publications publications"
+    "content1 content2 content2 content2"
+    "content3 content4 content4 content4"
+    "gallery gallery gallery gallery"
+    "projects projects projects projects"
+    "experience experience experience experience"
+    "exp-info exp-info exp-info exp-info"
+    "blog blog blog blog"
+    "blog-post blog-post blog-post blog-post"
+    "hobbies hobbies hobbies hobbies"
     
     ;
-    place-content: center;
-}
-.navigation{
+    grid-gap:0.5rem;
 
-    float: right;
-    font-size: 30px;
-    max-height: 50px;
+    
+    font-weight: 800;
+    font-size: 1EM;
+    color: #fff;
+    background-color: #EDEAE1;
+    
+}
+
+nav{
     grid-area: nav;
-}
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
 
-a{
-    padding: 10px;
-}
-
-.about{
-    grid-area: about;
-    padding: 50px;
-    margin: 30px;
-}
-
-.someinfo{
-
-    grid-area: someinfo;
-    padding: 125px;
-}
-#education{
-    float: top;
-}
-p{
-    display: inline-block;
-    align-items: center;
+    @media (min-width: 499px){
+        padding: 20px;
+    }
 }
 
 .projects{
-    text-align: justify;
+    grid-area: projects;
 }
 
-img{
+.navbar {
+    overflow: hidden;        
+    align-items: center; 
+    float: right;
+    
+    
+}
 
+.navbar a {
+                 
     display: inline-block;
-    align-items: center;
+           
+    color: black;          
+    text-align: center;       
+    padding: 14px 16px;       
+    text-decoration: none;    
+    background-color: #D9D8DF;
+    border-radius: 3px;
+    margin: 15px;
+
 }
 
-#myid{
+
+
+.navbar a:hover {
+    background-color: #d39fc6; 
+    color: white;
+}
+
+main{
+    background: #B0C2D7;
+    grid-area: main;
+    margin: 30px;
+    border-radius: var(--main-radius);
+
+    border-radius: 75px;
+    padding: var(--main-padding);
+    color: black;
+}
+
+.publications{
+    
+    
+    background: #DADBEF;
+    grid-area: publications;
+
+    border-radius: var(--main-radius);
+
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+}
+
+.hobbies{
+    
+    
+    background: #DADBEF;
+    grid-area: hobbies;
+    border-style: dashed;
+    color: #626482;
+
+    border-radius: var(--main-radius);
+
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+}
+
+.hobbies img{
+
+    display: inline;
+    height: 40px ;
+}
+.experience{
+    
+    
+    background: #DADBEF;
+    grid-area: experience;
+
+    border-radius: var(--main-radius);
+
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+}
+
+.experience h1{
+    margin: 5px;
+    padding-left: 20px;
+    border-style: dashed    ;
+    text-align: left;
+
+    color: #626482;
+}
+
+.exp-info{
+    grid-area: exp-info;
+}
+
+.hobbies h1{
+    margin: 5px;
+    
+    padding-left: 20px;
+    text-align: left;
+    color: #626482;
+    display: inline;
+}
+
+.blog{
+    background: #DADBEF;
+    grid-area: blog;
+
+    border-radius: var(--main-radius);
+
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+}
+
+.gallery{
+    background: #DADBEF;
+    grid-area: gallery;
+
+    border-radius: var(--main-radius);
+
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+}
+
+.publications h1{
+    margin: 5px;
+    padding-left: 20px;
+    border-style: dashed    ;
+    text-align: left;
+
+    color: #626482;
+}
+
+.gallery h1{
+    margin: 2px;
+    padding-left: 20px;
+    border-style: dashed    ;
+    text-align: left;
+    color: #626482;
+}
+
+.blog h1{
+    margin: 2px;
+    border-style: dashed    ;
+    padding-left: 20px;
+    text-align: left;
+    color: #626482;
+}
+
+.about-p{
+    
+    width: 100%;
+    vertical-align: top;
+}
+
+.about-p p{
+
+    font-size: 1.2em;;
+    margin-left: 100px;
+    text-justify: distribute;
+}
+
+#content2{
+background: #B0C2D7;
+    grid-area: content2;
+    margin: 30px;
+    border-radius: var(--main-radius);
+
+    border-radius: 75px;
+    padding: var(--main-padding);
+    color: black;
+
+}
+
+#content2 p{
+
+    font-size: 1.2em;;
+    margin-top: 50px;
+    margin-left: 100px;
+    text-justify: distribute;
+}
+
+#content4{
+    background: #B0C2D7;
+        grid-area: content4;
+        margin: 30px;
+        border-radius: var(--main-radius);
+    
+        border-radius: 75px;
+        padding: var(--main-padding);
+        color: black;
+    
+    }
+    
+#content4 p{
+    
+        font-size: 1.2em;;
+        margin-top: 50px;
+        margin-left: 100px;
+        text-justify: distribute;
+    }
+
+.name{
+    
+    font-family: 'Caveat', cursive;
+    margin-left: 100px;
+    margin-top: 30px;
+    width: 100%;
+    vertical-align: top;
+    font-size: 5em;
+}
+
+.current-title{
+
+    font-family: 'Caveat', cursive;
+    margin-left: 100px;
+    margin-top: 10px;
+    width: 100%;
+    vertical-align: top;
+    font-size: 2em;
+}
+
+
+
+#sidebar{
+    
+    grid-area: sidebar;
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+}
+
+.tongue-img img{
+    float: right;
+    border-radius: 3000px;
+    margin: 20px;
+    height: 350px;
+    width: 230px;
+    
+}
+
+#content1{
+    
+    grid-area: content1;
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+    position: relative;
+}
+
+#content1 img{
+
+height: 250px;
+float: right;
+padding: 10px;
+}
+
+#content3 img{
+
+    height: 250px;
+    float: right;
+    padding: 10px;
+    }
+
+#content2{
+    background:var(--yellowish);
+    grid-area: content2;
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+    position: relative;
+}
+#content3{
+
+    
+    grid-area: content3;
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+    position: relative;
+}
+
+#content4{
+
+    background: var(--yellowish);
+    grid-area: content4;
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+    position: relative;
+}
+
+#image1{
+    
+    grid-area: image1;
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+}
+
+#image1 img{
+
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+#image2{
+    
+    grid-area: image2;
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+    
+}
+#image3{
+
+    
+    grid-area: image3;
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+    
+}
+
+#image4{
+
+    
+    grid-area: image4;
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+    
+}
+
+#image2 img{
+
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    
+    
+}
+#image3 img{
+
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+   
+}
+#image4 img{
+
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+
+.paper-name{
+
+    color: #5B4E50;
+    margin: 20px;
+    text-align: center;
+    text-justify:distribute;
+}
+
+.paper-year{
+
+    color: #5B4E50;
+    margin-top: 10px;
+    text-align: center;
+    vertical-align: bottom;
+}
+
+.paper-link{
+
+    margin-top: 50px;
+    text-align: center;
+   
+    
+}
+
+.tongue-img{
+    grid-area: tongue;
+}
+
+
+.paper-link a{
+
+    text-align: center;
+    
+}
+
+
+
+.hobbie-img1 {
+    
+    grid-area: hobbie-img1;
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+    height: 100%;
+}
+
+.hobbie-img1 img{
+
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
+    border-bottom: #5B4E50;
     float: right;
 }
 
+.hobbie-img2 {
+    background:#D9D8DF;
+    grid-area: hobbie-img1;
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+}
+
+.hobbie-img2 img{
+
+    width: 100%;
+    height: 0.2fr;
+    object-fit: cover;
+}
+
+
+.projects ul{
+
+    color: rgb(78, 7, 23);
+}
+
+.projects ul li{
+    
+    padding: 10px;
+}
+
+.exp-info ul li{
+
+    list-style: none;
+    padding: 10px;
+    color: rgb(78, 7, 23);
+}
+
+.h-para{
+    width: 100%;
+    vertical-align: top;
+    
+    grid-area: h-para;
+    
+    
+
+    
+    color: black;
+}
+
+.blog-post{
+    width: 100%;
+    vertical-align: top;
+    background: #F7D7D4;
+    grid-area: blog-post;
+    
+    border-radius: var(--main-radius);
+
+    
+    color: black;
+}
+.h-para p{
+    font-size: 1.2em;;
+    
+    vertical-align: top;
+    
+    font-size: 1em;;
+    
+    margin: 110px;
+    margin-left: 0px;
+    padding: 10px;
+    background-color: #f45b69;
+    float: left;
+    border-radius: 10px;
+    
+}
+.post{
+
+    display: inline-block;
+    vertical-align: top;
+    margin: 0px;
+}
+.profile-pic{
+    display: inline-block;
+}
+.profile-pic img{
+
+    height: 50px;
+    width: 50px;
+    object-fit: contain;
+    border-radius: 70px;
+    float: right;
+}
+
+
 footer{
-    display: inline;
+    background: #f45b69;
+    grid-area: footer;
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+}
+
+/* mobile layout */
+
+@media only screen and (max-width: 499px){
+    .container{
+        
+        width: 100dvw;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.2fr 1fr 0.1fr 0.1fr 0.2fr 0.2fr 0.2fr 0.1fr 0.1fr 0.4fr 0.1fr 0.3fr 0.1fr 0.1fr 0.1fr ;
+        grid-template-areas: 
+        "nav"
+        "sidebar"
+        "main"
+        "publications"
+        "content1"
+        "content2"
+        "content3"
+        "content4"
+        "gallery"
+        "projects"
+        "experience"
+        "exp-info"
+        "blog"
+        "blog-post"
+        "hobbies";
+        row-gap: 0.5rem ;
+    }
+
+    .tongue-img img{
+       float: left;
+       
+    border-radius: 2000px;
+    padding-left: 75px;
+    padding-top: 50px;
+    padding-right: 75px;
+    padding-bottom: 50px;
+    height: 400px;
+    width: 300px;
+       
+            }
+
+    .publications h1{
+        text-align: center;
+    }
+    .gallery h1{
+        text-align: center;
+    }
+    .experience h1{
+        text-align: center;
+    }
+    .blog h1{
+        text-align: center;
+    }
+   
+    .navbar{
+        height: auto;
+        width: 100dvw;
+        align-content: center;
+    }
+    .navbar a{
+        padding: 8px;
+        font-size: 1rem;
+        margin: 1px;
+        text-align: center;
+        display: block;
+       
+        
+    }
+
+    main{
+        margin: 0px;
+        border-radius: 10px;
+    }
+    .about-p p{
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        font-size: 1.2em;;
+    margin-left: 0px;
+    text-justify:distribute;
+    }
+
+    .name{
+    font-family: 'Caveat', cursive;
+    margin-left: 5px;
+    margin-top: 5px;
+    padding-left: 12px;
+    width: 100%;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    vertical-align: top;
+    font-size: 5em;
+    }
+
+    .current-title{
+
+        font-family: 'Caveat', cursive;
+    margin-left: 5px;
+    margin-top: 5px;
+    padding-left: 12px;
+    width: 100%;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    vertical-align: top;
+        font-size: 2em;
+    }
+
+    #content1 img{
+    padding: 0px;
+    float: left;
+    margin-left: 125px;
+    }
+   
+    #content3 img{
+        padding: 0px;
+        float: left;
+        margin-left: 110px;
+        }
 }
 
