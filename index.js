@@ -50,6 +50,14 @@ const server = http.createServer(async (req, res) => {
                         }
               );
      }
+         else if (req.url === '/style.css') {
+        fs.readFile(path.join(__dirname, 'public', 'style.css'), (err, content) => {
+            if (err) throw err;
+            res.setHeader("Access-Control-Allow-Origin", "*");
+            res.writeHead(200, { 'Content-type': 'text/css' });
+            res.end(content);
+        });
+    }
     else if (req.url==='/api')
     {
         try {
